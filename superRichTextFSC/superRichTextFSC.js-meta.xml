@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="richText" type="String" description="Rich Text input to the Flow - this is the value you will be manipulating"/>
+            <property name="disallowedSymbols" type="String" role="inputOnly" description="Regex for Symbols you want to be blocked"/>
+            <property name="disallowedWords" type="String" role="inputOnly" description="Regex for Words you want to be blocked"/>
+            <property name="disallowedSymbolsMessage" type="String" role="inputOnly" description="Message to provide if blocked Symbols are used."/>
+            <property name="disallowedWordsMessage" type="String" role="inputOnly" description="Message to provide if blocked Words are used."/>
+            <property name="disallowedSymbolsType" type="String" role="inputOnly" description="Enter 'error' for Hard error on Symbols, 'warning' for Alert, or 'info' for notification.  Default is 'error'"/>
+            <property name="disallowedWordsType" type="String" role="inputOnly" description="Enter 'error' for Hard error on Words, 'warning' for Alert, or 'info' for notification.  Default is 'error'"/>
+            <property name="disallowedSymbolsMode" type="String" role="inputOnly" description="Enter 'sticky' to require close on Symbols message, 'pester' for 3 second duration, or 'dismissable' for click to close up to 3 seconds.  Default is 'sticky'"/>
+            <property name="disallowedWordsMode" type="String" role="inputOnly" description="Enter 'sticky' to require close on Words message, 'pester' for 3 second duration, or 'dismissable' for click to close up to 3 seconds.  Default is 'sticky'"/>
+            <property name="autoReplaceMap" type="String" role="inputOnly" description="JSON for key:value pairs you want to replace.  Key = value to replace, Value = value to replace with"/>
+            <property name="isValidCheck" type="Boolean" role="outputOnly" description="Optional boolean to pass out for handling of errors in Flow"/>
+            <property name="allowBack" type="Boolean" role="inputOnly" description="Set to True if you want to allow 'Previous' navigation in flow."/>
+            <property name="hardBlock" type="Boolean" role="inputOnly" description="Set to True if you want to block Save where disallowed Symbol or Word remains."/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

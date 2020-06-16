@@ -1,0 +1,38 @@
+<template>
+    <div>
+        <lightning-input-rich-text
+            value={richText}
+            onchange={handleTextChange}>
+        </lightning-input-rich-text>
+    </div>
+    <br/>
+    <div style="height:50px" class="slds-grid slds-wrap slds-align_absolute-center slds-p-around_xx-small">
+        <div class="slds-p-around_xx-small">
+            <lightning-input type="text" label="Search for Value" placeholder="Replace Text" value={searchTerm} onchange={handleSearchChange}></lightning-input>
+        </div>
+        <div class="slds-p-around_xx-small">
+            <lightning-input type="text" label="Replace with Value" placeholder="Replace With" value={replaceValue} onchange={handleReplaceChange}></lightning-input>
+        </div>
+        <div class="slds-p-around_xx-small">
+            <br/><lightning-button variant="success" label="Search and Replace" onclick={searchReplace} icon-name="utility:search"></lightning-button><br/>
+        </div>
+    </div><br/><br/>
+    <div class="slds-grid slds-gutters slds-grid_align-center">
+        <template if:true={allowBack}>
+            <div style="height:50px" class="slds-col slds-p-around_xx-small">
+                <lightning-button variant="destructive" label="Go Back" onclick={handleGoBack} icon-name="utility:skip_back"></lightning-button>
+            </div>
+        </template>
+        <div style="height:50px" class="slds-col slds-p-around_xx-small">
+            <lightning-button variant="brand" label="Apply Suggested Terms" onclick={applySuggested} icon-name="utility:merge"></lightning-button>
+        </div>
+        <template if:true={allowRevert}>
+            <div style="height:50px" class="slds-col slds-p-around_xx-small">
+                <lightning-button variant="destructive" label="Revert Last Change" onclick={handleRevert} icon-name="utility:delete"></lightning-button>
+            </div>
+         </template>
+        <div style="height:50px" class="slds-col slds-p-around_xx-small">
+            <lightning-button variant="brand" label="Save and Exit" onclick={handleGoNext} icon-name="utility:save"></lightning-button>
+        </div>
+    </div>
+</template>
