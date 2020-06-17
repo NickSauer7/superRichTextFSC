@@ -11,16 +11,16 @@ LWC for Rich Text management in Flows
 
 
 |Parameter	               |I	   |O	   |Information 
-|--------------------------|-------|-------|--------------------------------------------------------------|
-|allowBack	               |X	   |       |Determines whether or not Screen shows Previous navigation    |
-|autoReplaceMap	           |X	   |       |JSON formatted key:value map.  Key will be replaced by Value  |
-|disallowedSymbols	       |X	   |       |Regex for disallowed symbols                                  |
-|disallowedWords	       |       |X	   |Regex for disallowed words                                    |
-|disallowedSymbolsMessage  |X	   |       |Message to show when disallowed symbols used                  |
-|disallowedWordsMessage	   |X	   |	   |Message to show when disallowed words used                    |
-|disallowedSymbolsType	   |X	   |       |Toast message type for disallowed symbols usage (error)       |
-|disallowedSymbolsMode	   |X	   |       |Toast message mode for disallowed symbols usage (sticky)      |
-|disallowedSymbolsType	   |X	   |       |Toast message type for disallowed words usage (error)         |
-|disallowedSymbolsMode	   |X	   |       |Toast message mode for disallowed words usage (sticky)        |
-|hardBlock	               |X	   |	   |If True, then block ‘Next’ action until error resolved        |
-|richText	               |X	   |X	   |Input and output RichText that you’ll be editing              |
+|--------------------------|-------|-------|-------------------------------------------------------------------------------|
+|allowBack	               |X	   |       |Determines whether or not Screen shows Previous navigation (default => false)  |
+|autoReplaceMap	           |X	   |       |JSON formatted key:value map.  (example => {"Test": "GreatTest™"})             |
+|disallowedSymbols	       |X	   |       |Regex for disallowed symbols  (example => [&\/\\@])                            |
+|disallowedWords	       |       |X	   |Regex for disallowed words  (example => (latest|recommended|upg|upgs)\b)       |
+|disallowedSymbolsMessage  |X	   |       |Message to show when disallowed symbols used (example => Invalid Symbols)      |
+|disallowedWordsMessage	   |X	   |	   |Message to show when disallowed words used (example => Invalid Words)          |
+|disallowedSymbolsType	   |X	   |       |Toast message type for disallowed symbols usage (default => error)             |
+|disallowedSymbolsMode	   |X	   |       |Toast message mode for disallowed symbols usage (default => sticky)            |
+|disallowedSymbolsType	   |X	   |       |Toast message type for disallowed words usage (default => error)               |
+|disallowedSymbolsMode	   |X	   |       |Toast message mode for disallowed words usage (default => sticky)              |
+|hardBlock	               |X	   |	   |If True, then block ‘Next’ action until error resolved (default => false)      |
+|richText	               |X	   |X	   |Input and output RichText that you’ll be editing                               |
