@@ -13,9 +13,9 @@ LWC for Rich Text management in Flows
 |Parameter	               |I	   |O	   |Information 
 |--------------------------|-------|-------|-------------------------------------------------------------------------------|
 |allowBack	               |X	   |       |Determines whether or not Screen shows Previous navigation (default => false)  |
-|autoReplaceMap	           |X	   |       |JSON formatted key:value map.  (example => {"Test": "GreatTest™"})             |
-|disallowedSymbols	       |X	   |       |Regex for disallowed symbols  (example => [&\/\\@])                            |
-|disallowedWords	       |       |X	   |Regex for disallowed words  (example => (latest|recommended|upg|upgs)\b)       |
+|autoReplaceMap	           |X	   |       |JSON formatted key:value map.  (example => {"Test": "GreatTest™"} )            |
+|disallowedSymbols	       |X	   |       |Regex for disallowed symbols  (example => [&\/\\@] )                           |
+|disallowedWords	       |       |X	   |Regex for disallowed words  (example => (badterm)\b )                          |
 |disallowedSymbolsMessage  |X	   |       |Message to show when disallowed symbols used (example => Invalid Symbols)      |
 |disallowedWordsMessage	   |X	   |	   |Message to show when disallowed words used (example => Invalid Words)          |
 |disallowedSymbolsType	   |X	   |       |Toast message type for disallowed symbols usage (default => error)             |
